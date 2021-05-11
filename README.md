@@ -12,14 +12,14 @@ to install the application run `npm install`
 the project is setup accordingly to the react native startup instructions
 `https://reactnative.dev/docs/environment-setup`
 
-
-## run the app on AVD
+## run the app on AVD in android studio
 
 open the `reacttestproj/android` in android studio
 start a android virtual device
 run the application from android studio
 
-or start the application from the cli by:
+## run the app on AVD from Cli
+
 start a android virtual device or android device.
 
 open a terminal in the project folder and start Metro by running
