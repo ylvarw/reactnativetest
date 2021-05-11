@@ -1,6 +1,5 @@
 /**
- * Sample React Native App
- * https://github.com/facebook/react-native
+ *  application for performance tests
  *
  * @format
  * @flow strict-local
@@ -9,6 +8,7 @@
 import React from 'react';
 import type {Node} from 'react';
 import {
+  Button,
   SafeAreaView,
   ScrollView,
   StatusBar,
@@ -70,7 +70,40 @@ const App: () => Node = () => {
           style={{
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
           }}>
-          <Section title="Step One">
+            <Section>
+              <Text style={styles.highlight}>CPU tests</Text>
+              {/* <Text>Selected test found {{foundprime}} primenumbers</Text> */}
+
+            </Section>
+            <Section>
+              <Button
+                title="10000"
+                onPress={() => StartCpuTest(10000)}
+              />
+              
+            </Section>
+            {/* <Section>
+              <Button
+                title="50000"
+                onPress={() => StartCpuTest(50000)}
+              />
+              
+            </Section> */}
+            {/* <Section>
+              <Button
+                title="100000"
+                onPress={() => StartCpuTest(100000)}
+              />
+              
+            </Section> */}
+            {/* <Section>
+              <Button
+                title="150000"
+                onPress={() => StartCpuTest(150000)}
+              />
+              
+            </Section> */}
+          {/* <Section title="Step One">
             Edit <Text style={styles.highlight}>App.js</Text> to change this
             screen and then come back to see your edits.
           </Section>
@@ -83,7 +116,7 @@ const App: () => Node = () => {
           <Section title="Learn More">
             Read the docs to discover what to do next:
           </Section>
-          <LearnMoreLinks />
+          <LearnMoreLinks /> */}
         </View>
       </ScrollView>
     </SafeAreaView>
