@@ -88,6 +88,14 @@ const App: () => Node = () => {
       return foundPrime;
   };
 
+  const ramTest = () => {
+      var objects = new Array();
+      while (true) {
+         objects = new Object();
+         print("hej")
+      }
+  };
+
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
@@ -110,10 +118,17 @@ const App: () => Node = () => {
             </Section>
             <Section>
               <Button
-                title="10000"
+                title="cpu"
                 onPress={() => runTest(1000000)}
               />
 
+            </Section>
+            <Section>
+
+              <Button
+                title="ram"
+                onPress={() => ramTest()}
+              />
             </Section>
             {/* <Section>
               <Button
