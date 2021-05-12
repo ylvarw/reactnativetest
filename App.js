@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 /**
  *  application for performance tests
  *
@@ -25,6 +26,7 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+import CpuTest from './src/components/Cputest';
 
 const Section = ({children, title}): Node => {
   const isDarkMode = useColorScheme() === 'dark';
@@ -73,36 +75,23 @@ const App: () => Node = () => {
             <Section>
               <Text style={styles.highlight}>CPU tests</Text>
               {/* <Text>Selected test found {{foundprime}} primenumbers</Text> */}
+            </Section>
 
-            </Section>
             <Section>
-              <Button
-                title="10000"
-                onPress={() => StartCpuTest(10000)}
-              />
-              
+              <Button title="10000" onPress={() => CpuTest.runTest(10000)} />
             </Section>
-            {/* <Section>
-              <Button
-                title="50000"
-                onPress={() => StartCpuTest(50000)}
-              />
-              
-            </Section> */}
-            {/* <Section>
-              <Button
-                title="100000"
-                onPress={() => StartCpuTest(100000)}
-              />
-              
-            </Section> */}
-            {/* <Section>
-              <Button
-                title="150000"
-                onPress={() => StartCpuTest(150000)}
-              />
-              
-            </Section> */}
+
+            <Section>
+              <Button title="50000" onPress={() => CpuTest.runTest(50000)} />
+            </Section>
+
+            <Section>
+              <Button title="100000" onPress={() => CpuTest.runTest(100000)} />
+            </Section> /
+
+            <Section>
+              <Button title="150000" onPress={() => CpuTest.runTest(150000)} />
+            </Section>
           {/* <Section title="Step One">
             Edit <Text style={styles.highlight}>App.js</Text> to change this
             screen and then come back to see your edits.

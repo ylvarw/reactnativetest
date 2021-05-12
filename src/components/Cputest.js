@@ -1,4 +1,5 @@
-// import React from 'react';
+/* eslint-disable prettier/prettier */
+import React from 'react';
 // import type {Node} from 'react';
 
 import { Component } from "react";
@@ -10,7 +11,6 @@ https://reactjs.org/docs/faq-functions.html
 
 class CpuTest extends Component {
     testPrime = number => {
-        
         if (number < 2) {
             return false;
         }
@@ -20,9 +20,8 @@ class CpuTest extends Component {
             return false;
             }
         }
-
         return true;
-    },
+    };
 
     runTest = n => {
         var foundPrime, count, isprime;
@@ -38,11 +37,9 @@ class CpuTest extends Component {
             }
             count++;
         }
-
         return foundPrime;
     };
+}
 
-
-};
 export default CpuTest;
-
+// export CpuTest from './Cputest';
