@@ -6,6 +6,7 @@
  */
 
 import React from 'react';
+import { Component } from "react";
 import type {Node} from 'react';
 import {
   Button,
@@ -55,6 +56,38 @@ const Section = ({children, title}): Node => {
 const App: () => Node = () => {
   const isDarkMode = useColorScheme() === 'dark';
 
+  const testPrime = (number) => {
+      if (number < 2) {
+          return false;
+      }
+
+      for (var i = 2; i < number; i++) {
+          if (number % i === 0) {
+          return false;
+          }
+      }
+
+      return true;
+
+  };
+  const runTest = (n) => {
+      var foundPrime, count, isprime;
+      console.log("test")
+      count = 0;
+      foundPrime = 0;
+
+      while (count < n) {
+          isprime = testPrime(count);
+
+          if (isprime) {
+              foundPrime++;
+          }
+          count++;
+      }
+
+      return foundPrime;
+  };
+
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
@@ -78,30 +111,30 @@ const App: () => Node = () => {
             <Section>
               <Button
                 title="10000"
-                onPress={() => StartCpuTest(10000)}
+                onPress={() => runTest(1000000)}
               />
-              
+
             </Section>
             {/* <Section>
               <Button
                 title="50000"
                 onPress={() => StartCpuTest(50000)}
               />
-              
+
             </Section> */}
             {/* <Section>
               <Button
                 title="100000"
                 onPress={() => StartCpuTest(100000)}
               />
-              
+
             </Section> */}
             {/* <Section>
               <Button
                 title="150000"
                 onPress={() => StartCpuTest(150000)}
               />
-              
+
             </Section> */}
           {/* <Section title="Step One">
             Edit <Text style={styles.highlight}>App.js</Text> to change this

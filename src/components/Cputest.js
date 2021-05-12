@@ -8,41 +8,38 @@ import { Component } from "react";
 https://reactjs.org/docs/faq-functions.html
 */
 
-class CpuTest extends Component {
-    testPrime = number => {
-        
-        if (number < 2) {
-            return false;
+
+const testPrime = (number) => {
+
+    if (number < 2) {
+        return false;
+    }
+
+    for (var i = 2; i < number; i++) {
+        if (number % i === 0) {
+        return false;
         }
+    }
 
-        for (var i = 2; i < number; i++) {
-            if (number % i === 0) {
-            return false;
-            }
-        }
-
-        return true;
-    },
-
-    runTest = n => {
-        var foundPrime, count, isprime;
-
-        count = 0;
-        foundPrime = 0;
-
-        while (count < n) {
-            isprime = this.testPrime(count);
-
-            if (isprime) {
-                foundPrime++;
-            }
-            count++;
-        }
-
-        return foundPrime;
-    };
-
-
+    return true;
 };
-export default CpuTest;
 
+const runTest = (n) => {
+    var foundPrime, count, isprime;
+
+    count = 0;
+    foundPrime = 0;
+
+    while (count < n) {
+        isprime = this.testPrime(count);
+
+        if (isprime) {
+            foundPrime++;
+        }
+        count++;
+    }
+
+    return foundPrime;
+};
+
+export default CpuTest;
