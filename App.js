@@ -89,10 +89,12 @@ const App: () => Node = () => {
   };
 
   const ramTest = () => {
+      var i = 0
       var objects = new Array();
       while (true) {
-         objects = new Object();
-         print("hej")
+         objects[i] = new Object();
+         console.log(i)
+         i++
       }
   };
 
